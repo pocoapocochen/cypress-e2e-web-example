@@ -1,0 +1,23 @@
+{
+  "name": "cypress-e2e-web-example",
+  "version": "1.0.0",
+  "description": "test",
+  "scripts": {
+    "cy:headed:dev": "NODE_ENV=development cypress open",
+    "cy:headed:staging": "NODE_ENV=staging cypress open",
+    "cy:headless:dev": "NODE_ENV=development cypress run --headless --browser chrome --spec 'cypress/integration/**/*.feature'",
+    "cy:headless:staging": "NODE_ENV=staging cypress run --headless --browser chrome --spec 'cypress/integration/**/*.feature'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^8.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "dotenv": "^10.0.0",
+    "dotenv-flow": "^3.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "author": "Yujie",
+  "license": "ISC"
+}
